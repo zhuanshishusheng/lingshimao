@@ -45,14 +45,14 @@
                      android:layout_weight="1"
                      android:layout_height="80dp"
                      android:scaleType="fitXY"
-                     android:src="@mipmap/topic_image_ex"/>
+                     android:src="@mipmap/topic_nvshen"/>
                  <ImageView
                      android:layout_width="0dp"
                      android:scaleType="fitXY"
                      android:layout_weight="1"
                      android:layout_marginLeft="5dp"
                      android:layout_height="80dp"
-                     android:src="@mipmap/topic_image_ex"/>
+                     android:src="@mipmap/topic_bangong"/>
              </LinearLayout>
              <LinearLayout
                  android:layout_width="match_parent"
@@ -66,14 +66,14 @@
                      android:layout_weight="1"
                      android:layout_height="80dp"
                      android:scaleType="fitXY"
-                     android:src="@mipmap/topic_image_ex"/>
+                     android:src="@mipmap/topic_chihuo"/>
                  <ImageView
                      android:layout_width="0dp"
                      android:scaleType="fitXY"
                      android:layout_weight="1"
                      android:layout_marginLeft="5dp"
                      android:layout_height="80dp"
-                     android:src="@mipmap/topic_image_ex"/>
+                     android:src="@mipmap/topic_find"/>
              </LinearLayout>
 
              <ImageView
@@ -91,7 +91,7 @@
                  android:scaleType="fitXY"
                  android:layout_marginLeft="5dp"
                  android:layout_marginRight="5dp"
-                 android:src="@mipmap/topic_center_image_ex"/>
+                 android:src="@mipmap/top_botton_ex1"/>
              <ImageView
                  android:layout_marginTop="10dp"
                  android:layout_width="match_parent"
@@ -99,7 +99,7 @@
                  android:scaleType="fitXY"
                  android:layout_marginLeft="5dp"
                  android:layout_marginRight="5dp"
-                 android:src="@mipmap/topic_center_image_ex"/>
+                 android:src="@mipmap/top_bottom3"/>
              <ImageView
                  android:layout_marginTop="10dp"
                  android:layout_width="match_parent"
@@ -107,7 +107,8 @@
                  android:scaleType="fitXY"
                  android:layout_marginLeft="5dp"
                  android:layout_marginRight="5dp"
-                 android:src="@mipmap/topic_center_image_ex"/>
+                 android:src="@mipmap/top_bottom4"
+                 android:layout_marginBottom="15dp"/>
          </LinearLayout>
      </ScrollView>
 </LinearLayout>

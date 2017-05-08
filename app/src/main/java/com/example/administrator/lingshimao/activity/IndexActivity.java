@@ -30,6 +30,7 @@ public class IndexActivity extends AppCompatActivity {
             @Override
             public void run() {
                 CommonUtil.startActivity(IndexActivity.this, MainActivity.class);
+                finish();
             }
         }, 3000);
     }
