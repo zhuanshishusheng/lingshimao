@@ -16,6 +16,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="15dp"/>
         <ImageView
+            android:id="@+id/cat_car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/cat_car_white"
@@ -29,10 +30,12 @@
             android:gravity="center_horizontal"
             android:layout_centerInParent="true">
             <com.example.administrator.lingshimao.view.CustomImageView
+                android:id="@+id/cat_login"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:src="@mipmap/woniu_img"/>
             <TextView
+                android:id="@+id/cat_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="登陆 / 注册"

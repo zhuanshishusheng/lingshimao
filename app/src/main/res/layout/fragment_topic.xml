@@ -47,6 +47,7 @@
                      android:scaleType="fitXY"
                      android:src="@mipmap/topic_nvshen"/>
                  <ImageView
+                     android:id="@+id/topic_bangonglingzui"
                      android:layout_width="0dp"
                      android:scaleType="fitXY"
                      android:layout_weight="1"

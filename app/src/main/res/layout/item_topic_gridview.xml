@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="155dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/item_topic_gridview_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp" />
+    <TextView
+        android:id="@+id/item_topic_gridview_describe"
+        android:layout_width="155dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:lines="2"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="140dp"
+        android:layout_height="1dp"
+        android:background="@color/catGray"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/item_topic_gridview_price"
+        android:layout_width="155dp"
+        android:layout_height="45dp"
+        android:gravity="center"/>
+</LinearLayout>
