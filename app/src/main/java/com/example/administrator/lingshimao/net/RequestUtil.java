@@ -5,6 +5,9 @@ package com.example.administrator.lingshimao.net;
  */
 
 public class RequestUtil {
-    public static final String REQUEST_HEAD="http://192.168.0.12:8080//cat";
+    public static final String REQUEST_HEAD="http://192.168.43.139:8080//cat";
 
+    public static final String REQUEST_REGISTER=REQUEST_HEAD+"/register";
+
+    public static final String REQUEST_ORDER_LIST =REQUEST_HEAD+"/orderlist" ;
 }

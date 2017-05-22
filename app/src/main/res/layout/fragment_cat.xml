@@ -33,7 +33,7 @@
                 android:id="@+id/cat_login"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@mipmap/woniu_img"/>
+                android:src="@mipmap/cat_no_login"/>
             <TextView
                 android:id="@+id/cat_username"
                 android:layout_width="wrap_content"
@@ -51,6 +51,7 @@
         android:layout_marginTop="10dp"
         android:background="@android:color/white">
         <TextView
+            android:id="@+id/cat_order_daifukuan"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -61,6 +62,7 @@
             android:paddingTop="20dp"
             android:textColor="@android:color/black"/>
         <TextView
+            android:id="@+id/cat_order_daifahuo"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -70,6 +72,7 @@
             android:gravity="center"
             android:textColor="@android:color/black"/>
         <TextView
+            android:id="@+id/cat_order_daishouhuo"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -79,6 +82,7 @@
             android:gravity="center"
             android:textColor="@android:color/black"/>
         <TextView
+            android:id="@+id/cat_order_daipingjia"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -89,6 +93,7 @@
             android:textColor="@android:color/black"/>
     </LinearLayout>
     <RelativeLayout
+        android:id="@+id/cat_order"
         android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="43dp"
@@ -197,6 +202,7 @@
             android:layout_marginRight="15dp"/>
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/cat_call"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="43dp"
@@ -208,6 +214,7 @@
             android:src="@mipmap/lianxikedu_icon48"
             android:layout_marginLeft="15dp"/>
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="联系客服"

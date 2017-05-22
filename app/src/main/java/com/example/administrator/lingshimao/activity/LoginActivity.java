@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.administrator.lingshimao.R;
@@ -54,6 +55,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     };
     private Gson gson;
     private LoginBean mLoginBean;
+    private ImageView mReturn;
 
 
     @Override
@@ -83,6 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mUsername =(EditText)findViewById(R.id.login_username_et);
         mPassword =(EditText)findViewById(R.id.login_password_et);
         mLogin =(Button)findViewById(R.id.login_login);
+        mReturn =(ImageView)findViewById(R.id.login_return);
 
     }
 
@@ -92,6 +95,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.login_login:
                 login();
                 break;
+            case R.id.login_return:
+                finish();
+                break;
         }
     }
 
@@ -99,7 +105,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String username=mUsername.getText().toString();
         String password=mPassword.getText().toString();
         String url= RequestUtil.REQUEST_HEAD+"/login"+"?username="+username+"&"+"password="+password;
-        Log.i("ceshi",url);
         okhttpManager.getString(url, new OKHttpManager.HttpCallBack() {
             @Override
             public void onError(Exception e) {
@@ -108,6 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onSuccess(String string) {
+                Log.i("ceshi",string);
 
                 sendSuccessMessage(string);
             }

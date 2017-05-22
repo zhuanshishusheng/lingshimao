@@ -7,7 +7,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,7 +85,6 @@ public class GoodsActivity extends AppCompatActivity implements AdapterView.OnIt
 
             @Override
             public void onSuccess(String string) {
-                Log.i("ceshi",string);
 
                 sendSuccessMessage(string);
 

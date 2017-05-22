@@ -24,6 +24,9 @@ import com.example.administrator.lingshimao.net.OKHttpManager;
 import com.example.administrator.lingshimao.net.RequestUtil;
 import com.google.gson.Gson;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 /**
  * Created by Administrator on 2017/5/13 0013.
@@ -106,7 +109,6 @@ public class CarActivity extends AppCompatActivity implements View.OnClickListen
 
             @Override
             public void onSuccess(String string) {
-                Log.i("ceshi",string);
               sendSuccessMessage(string,2);
             }
         });
@@ -134,13 +136,41 @@ public class CarActivity extends AppCompatActivity implements View.OnClickListen
                 if(mCarBean.getData()==null||mCarBean.getData().size()==0){
                     Toast.makeText(this, "购物车没有商品", Toast.LENGTH_SHORT).show();
                 }else{
-                    //balanceGoods();
+                    balanceGoods();
                 }
                 break;
         }
     }
 
+    private void balanceGoods() {
 
+        String url=RequestUtil.REQUEST_HEAD+"/submit";
+
+        Map<String,String> map=new HashMap<>();
+        map.put("userid",MCApplication.getUser().getId()+"");
+        StringBuffer sku=new StringBuffer();
+        for(CarBean.DataBean bean:mCarBean.getData()){
+            sku.append(bean.getId()+":"+1+"|");
+        }
+        sku.deleteCharAt(sku.length()-1);
+        map.put("sku",sku.toString());
+        map.put("seller","seller");
+        map.put("addressid",MCApplication.getUser().getDefaultAddress()+"");
+
+        okhttpManager.postMap(url, map, new OKHttpManager.HttpCallBack() {
+            @Override
+            public void onError(Exception e) {
+                sendErrorMessage();
+            }
+
+            @Override
+            public void onSuccess(String string) {
+                Log.i("ceshi",string);
+                sendSuccessMessage(string,3);
+            }
+        });
+
+    }
 
 
     class CarListAdapter extends BaseAdapter {

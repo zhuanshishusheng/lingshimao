@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -94,7 +93,6 @@ public class GoodsDetialActivity extends AppCompatActivity implements View.OnCli
         //网络加载图片
         Glide.with(this).load(RequestUtil.REQUEST_HEAD+mGood.getImageDetail())
                 .into(mDetailImage);
-        Log.i("ceshi",RequestUtil.REQUEST_HEAD+mGood.getImageDetail());
         mDetailPrice.setText("￥"+mGood.getPrice()+".00");
         mDetailMonth.setText("月销量"+mGood.getProceeds()+"件");
         mDetailLove.setText("喜欢"+mGood.getLove()+"人");

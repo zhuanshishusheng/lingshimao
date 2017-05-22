@@ -5,21 +5,23 @@ package com.example.administrator.lingshimao.bean;
  */
 
 public class LoginBean {
-
     /**
-     * data : {"id":10001,"password":"123456","username":"zp"}
+     * data : {"defaultAddress":"1","id":10001,"password":"123456","phone":"15538302070","username":"zp"}
      * response : login
      */
 
     private DataBean data;
     private String response;
-    /**
-     * error : 请求参数错误或缺失
-     * error_code : 1534
-     */
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
 
     private String error;
-    private String error_code;
 
     public DataBean getData() {
         return data;
@@ -37,32 +39,28 @@ public class LoginBean {
         this.response = response;
     }
 
-    public String getError() {
-        return error;
-    }
-
-    public void setError(String error) {
-        this.error = error;
-    }
-
-    public String getError_code() {
-        return error_code;
-    }
-
-    public void setError_code(String error_code) {
-        this.error_code = error_code;
-    }
-
     public static class DataBean {
         /**
+         * defaultAddress : 1
          * id : 10001
          * password : 123456
+         * phone : 15538302070
          * username : zp
          */
 
+        private String defaultAddress;
         private int id;
         private String password;
+        private String phone;
         private String username;
+
+        public String getDefaultAddress() {
+            return defaultAddress;
+        }
+
+        public void setDefaultAddress(String defaultAddress) {
+            this.defaultAddress = defaultAddress;
+        }
 
         public int getId() {
             return id;
@@ -80,6 +78,14 @@ public class LoginBean {
             this.password = password;
         }
 
+        public String getPhone() {
+            return phone;
+        }
+
+        public void setPhone(String phone) {
+            this.phone = phone;
+        }
+
         public String getUsername() {
             return username;
         }
@@ -88,4 +94,17 @@ public class LoginBean {
             this.username = username;
         }
     }
+
+    /**
+     * data : {"id":10001,"password":"123456","username":"zp"}
+     * response : login
+     */
+
+
+    /**
+     * error : 请求参数错误或缺失
+     * error_code : 1534
+     */
+
+
 }

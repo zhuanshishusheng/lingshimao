@@ -9,17 +9,16 @@
         android:orientation="horizontal"
         android:background="@color/skyBlue">
         <ImageView
-            android:id="@+id/login_return"
+            android:id="@+id/register_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:layout_centerVertical="true"
             android:src="@mipmap/return_icon_white"/>
         <TextView
-            android:id="@+id/sort_good_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="登陆"
+            android:text="注册"
             android:layout_centerInParent="true"
             android:textSize="20dp"
             android:textColor="@color/white"/>
@@ -36,7 +35,7 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/user_icon"/>
         <EditText
-            android:id="@+id/login_username_et"
+            android:id="@+id/register_username_et"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -63,7 +62,7 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/password_icon"/>
         <EditText
-            android:id="@+id/login_password_et"
+            android:id="@+id/register_password_et"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
@@ -79,14 +78,41 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/skyBlue"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/password_icon"/>
+        <EditText
+            android:id="@+id/register_password_again_et"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:hint="请再次输入密码"
+            android:textSize="18dp"
+            android:textCursorDrawable="@null"
+            android:background="@null"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/skyBlue"/>
     <Button
-        android:id="@+id/login_login"
+        android:id="@+id/register_register"
         android:layout_width="match_parent"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_height="45dp"
-        android:text="登陆"
+        android:text="注册"
         android:textSize="18dp"
         android:textColor="@color/white"
         android:background="@color/skyBlue"/>
